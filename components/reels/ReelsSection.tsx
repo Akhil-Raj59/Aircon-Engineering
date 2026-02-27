@@ -1,0 +1,98 @@
+"use client";
+
+import { SectionHeader } from "../SectionHeader";
+import { VideoCard } from "./ReelCard";
+
+const reelsData = [
+  {
+    title: "Summer Vibes Fashion Edit",
+    category: "Fashion",
+    thumbnail: "/assets/reels/thumbnails/Reel%201.jpg",
+    videoUrl: "/assets/reels/reel-1.mp4",
+  },
+  {
+    title: "Street Food Documentary",
+    category: "Food",
+    thumbnail: "/assets/reels/thumbnails/reel%202.jpg",
+    videoUrl: "/assets/reels/reel-2.mp4",
+  },
+  {
+    title: "Urban Dance Challenge",
+    category: "Dance",
+    thumbnail: "/assets/reels/thumbnails/reel%203.jpg",
+    videoUrl: "/assets/reels/reel-3.mp4",
+  },
+  {
+    title: "Skincare Routine Reveal",
+    category: "Beauty",
+    thumbnail: "/assets/reels/thumbnails/reel%204.jpg",
+    videoUrl: "/assets/reels/reel-4.mp4",
+  },
+  {
+    title: "Fitness Transformation",
+    category: "Lifestyle",
+    thumbnail: "/assets/reels/thumbnails/reel%205.jpg",
+    videoUrl: "/assets/reels/reel-10.mp4",
+  },
+  {
+    title: "Travel Vlog: Tokyo Nights",
+    category: "Travel",
+    thumbnail: "/assets/reels/thumbnails/reel%206.jpg",
+    videoUrl: "/assets/reels/reel-6.mp4",
+  },
+  {
+    title: "Coffee Art Mastery",
+    category: "Food",
+    thumbnail: "/assets/reels/thumbnails/reel%207.jpg",
+    videoUrl: "/assets/reels/reel-7.mp4",
+  },
+  {
+    title: "Sneaker Unboxing Hype",
+    category: "Fashion",
+    thumbnail: "/assets/reels/thumbnails/reel%208.jpg",
+    videoUrl: "/assets/reels/reel-8.mp4",
+  },
+  {
+    title: "Yoga Flow Morning",
+    category: "Wellness",
+    thumbnail: "/assets/reels/thumbnails/reel%209.jpg",
+    videoUrl: "/assets/reels/reel-9.mp4",
+  },
+  {
+    title: "Tech Review: Latest Gadgets",
+    category: "Tech",
+    thumbnail: "/assets/reels/thumbnails/reel%2010.jpg",
+    videoUrl: "/assets/reels/reel-11.mp4",
+  },
+];
+
+export default function ReelsSection() {
+  return (
+    <section
+      id="reels"
+      className="section-padding bg-gradient-to-b from-background to-muted/30"
+    >
+      <div className="container mx-auto">
+        <SectionHeader
+          badge="🎬 Reels & Short Content"
+          title="Scroll-Stopping"
+          titleAccent="Vertical Magic"
+          description="Fast-paced edits designed for Instagram, TikTok, and YouTube Shorts. Crafted to capture attention in the first second."
+        />
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+          {reelsData.map((reel, index) => (
+            <VideoCard
+              key={reel.title}
+              title={reel.title}
+              category={reel.category}
+              thumbnail={reel.thumbnail}
+              videoUrl={reel.videoUrl}
+              delay={index * 0.05}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
