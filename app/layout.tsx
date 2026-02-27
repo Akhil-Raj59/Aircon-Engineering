@@ -1,38 +1,31 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Inter, Poppins } from "next/font/google";
+import StickyCTA from "@/components/sections/StickyCTA";  
 
-import Header from "@/components/Header";
-import { Providers } from "@/components/providers";
-import { Space_Grotesk, Inter } from "next/font/google";
-import { Toaster } from "sonner";
-
-const spaceGrotesk = Space_Grotesk({
+const headingFont = Poppins({
   subsets: ["latin"],
   variable: "--font-heading",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const inter = Inter({
+const bodyFont = Inter({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600"],
 });
 
-
 export const metadata: Metadata = {
-  icons: {
-    icon: [
-      {
-        url: '/favicon.ico',
-        type: 'image/x-icon',
-      },
-    ],
-    
-    shortcut: '/favicon.ico',
-  },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"),
-  title: "Kreative Werbung Labs",
-  description: "Creative video production & motion design studio",
+  metadataBase: new URL("https://aircon-engineering.com"),
+  title: "Ac Service & Repair in Gurgaon | Aircon Engineering",
+  description:
+    "Affordable AC repair, gas filling, installation & maintenance in Gurgaon. Same day service with trained technicians.",
+  keywords: [
+    "AC service in Gurgaon",
+    "AC repair Gurgaon",
+    "AC gas filling Gurgaon",
+    "AC installation Gurgaon",
+  ],
 };
 
 export default function RootLayout({
@@ -42,15 +35,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${spaceGrotesk.variable} ${inter.variable}`}>
-      
-        <Providers>
-          
-          
-          {children}
-          <Toaster richColors />
+      <body className={`${headingFont.variable} ${bodyFont.variable}`}>
+        
+        {children}
 
-        </Providers>
+        
+        <StickyCTA />
+
       </body>
     </html>
   );

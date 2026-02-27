@@ -1,58 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
-  --color-border: hsl(var(--border));
-  --color-ring: hsl(var(--ring));
+  /* This maps your CSS variables to Tailwind utilities automatically */
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(222 47% 11%);
+
+  --color-primary: hsl(221 83% 53%);
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(142 71% 45%);
+  --color-secondary-foreground: hsl(0 0% 100%);
+
+  --color-muted: hsl(210 40% 96%);
+  --color-muted-foreground: hsl(215 16% 47%);
+
+  --color-border: hsl(214 32% 91%);
   
-  --radius-xl: var(--radius);
+  --radius-xl: 0.75rem;
 
-  /* Typography */
-  --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
-
-  /* Gradients */
-  --background-image-gradient-primary: var(--gradient-primary);
-  --background-image-gradient-ai: var(--gradient-ai);
+  /* Ensure these fonts are defined so your @apply rules don't fail later */
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+body {
+  padding-bottom: 70px;
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 98%;
-    --primary: 81 100% 55%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 12 100% 64%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 270 100% 65%;
-    --accent-foreground: 0 0% 98%;
-    --border: 0 0% 15%;
-    --ring: 81 100% 55%;
-    --radius: 0.75rem;
-
-    --gradient-primary: linear-gradient(135deg, hsl(81 100% 55%) 0%, hsl(100 100% 45%) 100%);
-    --gradient-ai: linear-gradient(135deg, hsl(270 100% 65%) 0%, hsl(320 100% 60%) 50%, hsl(81 100% 55%) 100%);
-    --glass-bg: hsl(0 0% 10% / 0.6);
-    --glass-border: hsl(0 0% 100% / 0.08);
-  }
-
   * {
+    /* Now that --color-border is in @theme, border-border exists! */
     @apply border-border;
   }
 
@@ -61,29 +37,24 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased font-body;
+    @apply bg-white text-foreground antialiased font-body;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4 {
     @apply font-heading;
   }
 }
 
 @layer components {
-  .text-gradient-primary {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-  }
-
   .section-padding {
-  @apply px-6 py-12 md:px-12 md:py-16 lg:px-24 lg:py-20;
-}
+    @apply px-6 py-12 md:px-12 md:py-16 lg:px-24 lg:py-20;
+  }
+
+  .primary-btn {
+    @apply bg-primary hover:opacity-90 text-primary-foreground px-6 py-3 rounded-xl font-medium transition;
+  }
+
+  .whatsapp-btn {
+    @apply bg-secondary hover:opacity-90 text-secondary-foreground px-6 py-3 rounded-xl font-medium transition;
+  }
 }
