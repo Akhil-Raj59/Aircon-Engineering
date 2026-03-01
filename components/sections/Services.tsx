@@ -11,7 +11,7 @@ export default function Services() {
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <p className="text-primary font-semibold text-sm tracking-wider uppercase">
             Professional AC Solutions
           </p>
@@ -21,7 +21,7 @@ export default function Services() {
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
             Same-day service • No hidden charges • 30-day service warranty
           </p>
-        </div>
+        </div> */}
 
         {/* Categories */}
         <div className="space-y-20">
