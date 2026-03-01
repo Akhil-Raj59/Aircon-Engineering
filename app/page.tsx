@@ -7,10 +7,12 @@ import ServiceAreas from "@/components/sections/ServiceAreas";
 import FAQ from "@/components/sections/FAQ";
 import StickyCTA from "@/components/sections/StickyCTA";
 import Footer from "@/components/sections/Footer";
+import Header from "@/components/sections/Header";
 
 export default function HomePage() {
   return (
     <main>
+      <Header />
       <Hero />
       <Services />
       <WhyChooseUs />

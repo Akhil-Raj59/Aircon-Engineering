@@ -132,13 +132,13 @@ export default function Services() {
                             Book Now
                           </a>
 
-                          <a
+                          {/* <a
                             href={`https://wa.me/${phoneNumber}`}
                             target="_blank"
                             className="whatsapp-btn flex-1 text-center"
                           >
                             WhatsApp
-                          </a>
+                          </a> */}
                         </div>
 
                       </div>

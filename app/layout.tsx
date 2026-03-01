@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Poppins } from "next/font/google";
 import StickyCTA from "@/components/sections/StickyCTA";  
+import { SearchProvider } from "@/components/SearchContext";
 
 const headingFont = Poppins({
   subsets: ["latin"],
@@ -36,8 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${headingFont.variable} ${bodyFont.variable}`}>
+        <SearchProvider>
         
         {children}
+        </SearchProvider>
+        
 
         
         <StickyCTA />
