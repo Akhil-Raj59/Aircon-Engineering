@@ -60,9 +60,9 @@ export default function Hero() {
           {/* Content */}
           <div className="relative z-10 flex flex-col justify-center h-full px-5 md:px-14 py-8 max-w-2xl">
             {/* Badge */}
-            <span className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full w-fit mb-3 border border-white/20">
+            {/* <span className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full w-fit mb-3 border border-white/20">
               ⭐ 4.8 &nbsp;•&nbsp; 500+ Happy Customers
-            </span>
+            </span> */}
 
             {/* Headline */}
             <h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight tracking-tight mb-2">
