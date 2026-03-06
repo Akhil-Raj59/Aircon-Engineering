@@ -1,4 +1,4 @@
-export const phoneNumber = "918860186269";
+export const phoneNumber = "918920741906";
 
 export const serviceCategories = [
   {
