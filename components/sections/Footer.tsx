@@ -67,10 +67,10 @@ export default function Footer() {
           <p className="text-sm mb-2">
             Phone:{" "}
             <a
-              href={`tel:+${phoneNumber}`}
+              href={`tel:+$8860186269`}
               className="hover:text-white transition"
             >
-              +{phoneNumber}
+              +{918860186269}
             </a>
           </p>
 

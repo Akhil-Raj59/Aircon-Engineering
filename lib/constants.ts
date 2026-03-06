@@ -72,6 +72,36 @@ export const serviceCategories = [
           excludes: ["Gas refill", "Spare parts"],
         },
       },
+      {
+        id: "premium-service",
+        title: "loda",
+        startingPrice: 469,
+        description:
+          "High-Pressure Jet Cleaning - Eliminates dust and debris to improve airflow",
+        options: 2,
+
+        subServices: [
+          {
+            id: "split-premium",
+            name: "Split AC Premium Service",
+            price: 469,
+          },
+          {
+            id: "window-premium",
+            name: "Window AC Premium Service",
+            price: 469,
+          },
+        ],
+
+        details: {
+          includes: [
+            "High-pressure jet wash",
+            "Condenser cleaning",
+            "Cooling efficiency test",
+          ],
+          excludes: ["Gas refill", "Spare parts"],
+        },
+      },
     ],
   },
 
@@ -141,6 +171,31 @@ export const serviceCategories = [
           excludes: ["Spare parts extra"],
         },
       },
+      {
+        id: "water-leakage-repair",
+        title: "Water Leakage Repair",
+        startingPrice: 469,
+        description:
+          "Thorough inspection of water leakage, slope issues, and dust blockages",
+        options: 2,
+
+        subServices: [
+          {
+            id: "split-water-repair",
+            name: "Split AC Water Leakage Repair",
+            price: 469,
+          },
+        ],
+
+        details: {
+          includes: [
+            "Leak inspection",
+            "Drain pipe cleaning",
+            "Blockage removal",
+          ],
+          excludes: ["Spare parts extra"],
+        },
+      },
     ],
   },
 
@@ -148,6 +203,34 @@ export const serviceCategories = [
     id: "installation",
     title: "AC Installation / Uninstallation",
     cards: [
+      {
+        id: "ac-installation",
+        title: "AC Installation",
+        startingPrice: 1029,
+        description:
+          "Installation of both indoor and outdoor units",
+        options: 2,
+
+        subServices: [
+          {
+            id: "split-install",
+            name: "Split AC Installation",
+            price: 1029,
+          },
+        ],
+
+        details: {
+          includes: [
+            "Indoor unit mounting",
+            "Outdoor unit fitting",
+            "Basic testing",
+          ],
+          excludes: [
+            "Stand cost extra",
+            "Copper pipe extra",
+          ],
+        },
+      },
       {
         id: "ac-installation",
         title: "AC Installation",
