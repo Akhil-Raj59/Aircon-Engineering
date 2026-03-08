@@ -74,7 +74,7 @@ export const serviceCategories = [
       },
       {
         id: "premium-service",
-        title: "loda",
+        title: "Uninstall",
         startingPrice: 469,
         description:
           "High-Pressure Jet Cleaning - Eliminates dust and debris to improve airflow",
