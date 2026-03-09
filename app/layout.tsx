@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     "AC gas filling Gurgaon",
     "AC installation Gurgaon",
   ],
+  
+  verification: {
+    google: "UGsvjIR02UtKZARrHkewThbls9WoLE_jydo9t_sRtLc",
+  },
 };
 
 export default function RootLayout({
