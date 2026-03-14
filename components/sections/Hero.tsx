@@ -1,7 +1,5 @@
 "use client";
 
-import { phoneNumber } from "@/lib/constants";
-
 const services = [
   {
     id: "installation",
@@ -66,15 +64,12 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight tracking-tight mb-2">
-              Want{" "}
-              <span className="text-cyan-300">Ultra‑Max</span>
-              <br />
-              Cooling?
+              Top-Rated AC Service <br className="md:hidden" />
+              <span className="text-cyan-300">in Gurgaon</span>
             </h1>
 
             <p className="text-white/80 text-sm md:text-base font-medium mb-4">
-              100% Cooling Guaranteed{" "}
-              <span className="text-yellow-300 font-bold">or New AC FREE!</span>
+              100% Cooling Guaranteed with <span className="text-yellow-300 font-bold">Ultra-Max Cleaning!</span>
             </p>
 
             {/* Sub-line */}

@@ -10,18 +10,18 @@ export default function Services() {
     <section className="section-padding bg-muted">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
-        {/* <div className="text-center mb-16">
+        {/* Section Global Header for SEO & UX */}
+        <div className="text-center mb-16">
           <p className="text-primary font-semibold text-sm tracking-wider uppercase">
-            Professional AC Solutions
+            Professional AC Solutions in Gurgaon
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mt-3">
-            Trusted Technicians.
+            Expert AC Repair, Service & Installation
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Same-day service • No hidden charges • 30-day service warranty
+            Get your air conditioner running like new. Same-day service • No hidden charges • 30-day service warranty.
           </p>
-        </div> */}
+        </div>
 
         {/* Categories */}
         <div className="space-y-20">
@@ -100,7 +100,7 @@ export default function Services() {
                             {/* Includes */}
                             <div>
                               <h5 className="font-semibold mb-3 text-green-600">
-                                What's Included
+                                What&apos;s Included
                               </h5>
                               <ul className="space-y-2 text-muted-foreground">
                                 {card.details.includes.map((item, i) => (

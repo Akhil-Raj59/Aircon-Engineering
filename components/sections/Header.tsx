@@ -16,6 +16,7 @@ const ALL_SUGGESTIONS = serviceCategories.flatMap((cat) =>
 export default function Header() {
   const { query, setQuery } = useSearch();
   const [focused, setFocused] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const filtered = query.trim()
@@ -52,20 +53,60 @@ export default function Header() {
 
   {/* Logo */}
   <div className="flex items-center">
-    <img
-      src="/assets/logo.png"
-      alt="Aircon Engineering"
-      className="h-8 w-auto"
-    />
+    <a href="/">
+      <img
+        src="/assets/logo.png"
+        alt="Aircon Engineering"
+        className="h-8 w-auto"
+      />
+    </a>
   </div>
 
-  {/* Location */}
-  <div className="flex items-center gap-1 text-sm font-medium text-gray-600">
+  {/* Navigation (Desktop) */}
+  <nav className="hidden md:flex gap-6 items-center">
+    <a href="/#services" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">Services</a>
+    <a href="/#pricing" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">Pricing</a>
+    <a href="/about" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">About</a>
+    <a href="/contact" className="text-sm font-medium text-gray-700 hover:text-blue-600 transition">Contact</a>
+  </nav>
+
+  {/* Location / Call */}
+  <div className="flex items-center gap-2 md:gap-4">
+    <div className="hidden sm:flex items-center gap-1 text-sm font-medium text-gray-600">
+      <span>Gurgaon ▾</span>
+    </div>
+    <a href={`tel:+${phoneNumber}`} className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg text-sm font-bold transition flex items-center gap-1">
+      <span>📞</span> <span className="hidden sm:inline">Book Now</span><span className="sm:hidden">Call</span>
+    </a>
     
-    <span>Gurgaon ▾</span>
+    {/* Hamburger Menu Toggle (Mobile) */}
+    <button 
+      className="md:hidden p-2 text-gray-700 hover:text-blue-600 focus:outline-none"
+      onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+    >
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {isMobileMenuOpen ? (
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        ) : (
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        )}
+      </svg>
+    </button>
   </div>
 
 </div>
+
+{/* Mobile Menu Dropdown */}
+{isMobileMenuOpen && (
+  <div className="md:hidden border-t border-gray-100 py-2 animate-in slide-in-from-top-2 fade-in duration-200">
+    <nav className="flex flex-col gap-1 px-2">
+      <a href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-2.5 text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">Services</a>
+      <a href="/#pricing" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-2.5 text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">Pricing</a>
+      <a href="/about" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-2.5 text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">About</a>
+      <a href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-2.5 text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">Contact</a>
+    </nav>
+  </div>
+)}
 
         {/* Search Bar */}
         <div className="pb-3 relative">

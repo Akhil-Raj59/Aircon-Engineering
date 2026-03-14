@@ -3,11 +3,11 @@ export const phoneNumber = "918920741906";
 export const serviceCategories = [
   {
     id: "service",
-    title: "AC Maintenance Service",
+    title: "Expert AC Maintenance & Servicing in Gurgaon",
     cards: [
       {
         id: "premium-service",
-        title: "Premium AC Service",
+        title: "Premium AC Servicing",
         startingPrice: 469,
         description: "High-Pressure Jet Cleaning - Eliminates dust and debris to improve airflow",
         options: 2,
@@ -22,9 +22,9 @@ export const serviceCategories = [
       },
       {
         id: "foam-blast-service",
-        title: "Foam Blast AC Service",
+        title: "Advanced Foam Jet AC Cleaning",
         startingPrice: 599,
-        description: "Ultra Max Cooling - Deep cleaning with foam jet spray for faster and more efficient cooling",
+        description: "Ultra Max Cooling - Deep cleaning with foam jet spray for faster and more efficient cooling. Highly recommended for dust-heavy environments in NCR.",
         options: 2,
         subServices: [
           { id: "split-foam-service", name: "Split AC Foam Service", price: 599 },
@@ -37,9 +37,9 @@ export const serviceCategories = [
       },
       {
         id: "featured-service-combo",
-        title: "Form Blast AC Service (4 ACs)",
+        title: "Foam Jet AC Service Combo (4 ACs)",
         startingPrice: 2279,
-        description: "Bulk service package for multiple units with high-pressure cleaning",
+        description: "Bulk service package for multiple units with high-pressure cleaning. Perfect for large apartments & offices.",
         options: 2,
         subServices: [
           { id: "split-premium-combo", name: "Split AC Premium Service (4 Units)", price: 2279 },
@@ -55,13 +55,13 @@ export const serviceCategories = [
 
   {
     id: "repair",
-    title: "AC Repair",
+    title: "Professional AC Repair Services",
     cards: [
       {
         id: "inspection",
-        title: "AC Inspection",
+        title: "Comprehensive AC Inspection",
         startingPrice: 299,
-        description: "Accurate diagnosis, comprehensive inspection, and prompt repairs",
+        description: "Accurate diagnosis, comprehensive inspection, and prompt repairs for cooling issues, PCB faults, or strange noises.",
         options: 2,
         subServices: [
           { id: "split-inspection", name: "Split AC Repair (Inspection Charges)", price: 299 },
@@ -74,9 +74,9 @@ export const serviceCategories = [
       },
       {
         id: "water-leakage-repair",
-        title: "Water Leakage Repair",
+        title: "AC Water Leakage Repair",
         startingPrice: 569,
-        description: "Thorough inspection of water leakage, slope issues, and dust blockages",
+        description: "Thorough inspection of water leakage from indoor unit, slope issues, and drain pipe dust blockages.",
         options: 1,
         subServices: [
           { id: "split-water-repair", name: "Split AC Water Leakage Repair", price: 569 },
@@ -106,13 +106,13 @@ export const serviceCategories = [
 
   {
     id: "installation",
-    title: "AC Installation / Uninstallation",
+    title: "AC Installation & Uninstallation",
     cards: [
       {
         id: "ac-installation",
-        title: "AC Installation",
+        title: "Professional AC Installation",
         startingPrice: 1149,
-        description: "Professional installation of both indoor and outdoor units",
+        description: "Expert installation of both indoor and outdoor units with core cutting and proper gas pressure check.",
         options: 1,
         subServices: [
           { id: "split-install", name: "Split AC Installation", price: 1549 },
@@ -141,13 +141,13 @@ export const serviceCategories = [
 
   {
     id: "gas",
-    title: "AC Gas Charging",
+    title: "AC Gas Charging & Refilling",
     cards: [
       {
         id: "gas-refill",
-        title: "AC Gas Refill",
+        title: "AC Gas Refill with Leak Testing",
         startingPrice: 2699,
-        description: "Leak detection, repair, and gas refilling for optimal performance",
+        description: "Nitrogen leak detection, brazing repair, vacuuming, and genuine refrigerant gas refilling for optimal cooling.",
         options: 4,
         subServices: [
           { id: "gas-1-ton", name: "Ac Gas Charging <= 1 Ton", price: 2699 },

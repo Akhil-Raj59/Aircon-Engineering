@@ -34,62 +34,79 @@ export default function Footer() {
 
           <ul className="space-y-3 text-sm">
             <li>
-              <a href="#services" className="hover:text-white transition">
+              <a href="/#services" className="hover:text-white transition">
                 Services
               </a>
             </li>
             <li>
-              <a href="#pricing" className="hover:text-white transition">
+              <a href="/#pricing" className="hover:text-white transition">
                 Pricing
               </a>
             </li>
             <li>
-              <a href="#faq" className="hover:text-white transition">
-                FAQ
+              <a href="/about" className="hover:text-white transition">
+                About Us
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-white transition">
-                Contact
+              <a href="/contact" className="hover:text-white transition">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="/privacy-policy" className="hover:text-white transition">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="/terms" className="hover:text-white transition">
+                Terms & Conditions
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Contact Info */}
+        {/* Contact Info & Brands/Areas */}
         <div>
           <h4 className="text-white font-semibold mb-4 text-sm tracking-wide uppercase">
-            Contact
+            Contact & Coverage
           </h4>
 
           <p className="text-sm mb-2">Gurgaon, Haryana</p>
-
           <p className="text-sm mb-2">
             Phone:{" "}
             <a
               href={`tel:+$8860186269`}
-              className="hover:text-white transition"
+              className="hover:text-white transition cursor-pointer"
             >
-              +{918860186269}
+              +(91) 88601-86269
             </a>
           </p>
 
-          <p className="text-sm mb-4">
+          <p className="text-sm mb-6">
             Email:{" "}
             <a
               href="mailto:support@airconengineering.in"
-              className="hover:text-white transition"
+              className="hover:text-white transition cursor-pointer"
             >
               support@airconengineering.in
             </a>
           </p>
-
-          <a
-            href={`tel:+${phoneNumber}`}
-            className="inline-block bg-blue-600 hover:bg-blue-700 transition px-5 py-2.5 rounded-lg text-sm font-medium text-white"
-          >
-            Call Now
-          </a>
+          
+          <div className="flex gap-8">
+            <ul className="space-y-2 text-xs">
+              <li className="text-gray-500 font-semibold mb-1">Top Areas</li>
+              <li><a href="/ac-service-in-dlf-phase-1-gurgaon" className="hover:text-white transition">DLF Phase 1</a></li>
+              <li><a href="/ac-service-in-sector-56-gurgaon" className="hover:text-white transition">Sector 56</a></li>
+              <li><a href="/ac-service-in-sohna-road-gurgaon" className="hover:text-white transition">Sohna Road</a></li>
+            </ul>
+             <ul className="space-y-2 text-xs">
+              <li className="text-gray-500 font-semibold mb-1">Top Brands</li>
+              <li><a href="/voltas-ac-service-gurgaon" className="hover:text-white transition">Voltas</a></li>
+              <li><a href="/daikin-ac-service-gurgaon" className="hover:text-white transition">Daikin</a></li>
+              <li><a href="/lg-ac-service-gurgaon" className="hover:text-white transition">LG</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 

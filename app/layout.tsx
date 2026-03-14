@@ -18,16 +18,49 @@ const bodyFont = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aircon-engineering.com"),
-  title: "Ac Service & Repair in Gurgaon | Aircon Engineering",
+  title: "Best AC Service & Repair in Gurgaon | Aircon Engineering",
   description:
-    "Affordable AC repair, gas filling, installation & maintenance in Gurgaon. Same day service with trained technicians.",
+    "Top-rated and affordable AC repair, gas filling, professional installation & maintenance in Gurgaon. Same-day service with verified, expert technicians. 100% Cooling Guaranteed.",
   keywords: [
     "AC service in Gurgaon",
     "AC repair Gurgaon",
     "AC gas filling Gurgaon",
     "AC installation Gurgaon",
+    "Best AC repair near me",
+    "Split AC service Gurgaon",
+    "Window AC repair Gurgaon",
+    "Air conditioner maintenance",
+    "Same day AC service Gurgaon",
+    "AC technician in Gurgaon"
   ],
-  
+  authors: [{ name: "Aircon Engineering" }],
+  creator: "Aircon Engineering",
+  publisher: "Aircon Engineering",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://aircon-engineering.com",
+    title: "Best AC Service & Repair in Gurgaon | Aircon Engineering",
+    description: "Expert AC repair, installation, and gas charging in Gurgaon. Book skilled technicians for same-day service.",
+    siteName: "Aircon Engineering",
+    images: [
+      {
+        url: "/assets/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Aircon Engineering Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best AC Service & Repair in Gurgaon | Aircon Engineering",
+    description: "Expert AC repair, installation, and gas charging in Gurgaon.",
+    images: ["/assets/logo.png"],
+  },
+  alternates: {
+    canonical: "/",
+  },
   verification: {
     google: "UGsvjIR02UtKZARrHkewThbls9WoLE_jydo9t_sRtLc",
   },
