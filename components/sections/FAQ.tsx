@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 
-export default function FAQ() {
+export default function FAQ({ dynamicLocation }: { dynamicLocation?: string }) {
   const faqs = [
     {
-      question: "What is the cost of AC general service in Gurgaon?",
+      question: `What is the cost of AC general service in ${dynamicLocation || 'Gurgaon'}?`,
       answer: "AC general service starts from ₹499 depending on AC type and condition.",
     },
     {
-      question: "Do you provide same day AC repair?",
-      answer: "Yes, we provide same day AC repair service across Gurgaon.",
+      question: `Do you provide same day AC repair${dynamicLocation ? ` in ${dynamicLocation}` : ''}?`,
+      answer: `Yes, we provide same day AC repair service${dynamicLocation ? ` in ${dynamicLocation}` : ' across Gurgaon'}.`,
     },
     {
       question: "Is there any inspection charge?",

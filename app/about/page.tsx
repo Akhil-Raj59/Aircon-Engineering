@@ -1,9 +1,33 @@
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Aircon Engineering Gurgaon",
+  description: "Learn about Aircon Engineering, Gurgaon's most trusted AC service provider. Expert technicians, 100% cooling guarantee, and same-day repair services.",
+  alternates: {
+    canonical: "https://www.aircon-engineering.com/about",
+  },
+};
 
 export default function AboutPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Aircon Engineering",
+      "description": "Gurgaon's most trusted AC service provider offering expert repair, maintenance, and installation services.",
+      "url": "https://www.aircon-engineering.com/about"
+    }
+  };
+
   return (
     <main className="min-h-screen flex flex-col pt-24 bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <div className="flex-grow max-w-4xl mx-auto px-6 py-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">About Aircon Engineering</h1>

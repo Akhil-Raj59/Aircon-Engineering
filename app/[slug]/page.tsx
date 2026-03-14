@@ -10,31 +10,7 @@ import Footer from "@/components/sections/Footer";
 import Header from "@/components/sections/Header";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-
-const areas = [
-  "sector-37", "sector-56", "basai", "dwarka-expressway", 
-  "sector-90", "sector-110", "dlf-phase-1", "dlf-phase-2", 
-  "dlf-phase-3", "sohna-road", "golf-course-road", "palam-vihar", 
-  "udyog-vihar", "mg-road"
-];
-
-const brands = [
-  "voltas", "daikin", "lg", "blue-star", "hitachi", 
-  "samsung", "o-general", "carrier", "panasonic", 
-  "haier", "godrej", "whirlpool"
-];
-
-// Reusable formatting helpers
-function formatAreaName(slug: string) {
-  return slug.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
-}
-
-function formatBrandName(slug: string) {
-  if (slug === "o-general") return "O General";
-  if (slug === "blue-star") return "Blue Star";
-  if (slug === "lg") return "LG";
-  return slug.charAt(0).toUpperCase() + slug.slice(1);
-}
+import { areas, brands, formatAreaName, formatBrandName } from "@/lib/seo-data";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -90,13 +66,18 @@ export default async function DynamicSeoPage({ params }: Props) {
   const { slug } = await params;
 
   let h1Text = "";
+  let dynamicLocation = "";
   
   if (slug.startsWith("ac-service-in-") && slug.endsWith("-gurgaon")) {
     const area = slug.replace("ac-service-in-", "").replace("-gurgaon", "");
-    h1Text = `Best AC Service in ${formatAreaName(area)}, Gurgaon, Haryana`;
+    if (!areas.includes(area)) notFound();
+    dynamicLocation = formatAreaName(area);
+    h1Text = `Best AC Service in ${dynamicLocation}, Gurgaon, Haryana`;
   } else if (slug.endsWith("-ac-service-gurgaon") && !slug.startsWith("ac-service-in-")) {
     const brand = slug.replace("-ac-service-gurgaon", "");
-    h1Text = `Specialized ${formatBrandName(brand)} AC Repair and Service in Gurgaon, Haryana`;
+    if (!brands.includes(brand)) notFound();
+    dynamicLocation = formatBrandName(brand);
+    h1Text = `Specialized ${dynamicLocation} AC Repair and Service in Gurgaon, Haryana`;
   } else {
     notFound();
   }
@@ -105,13 +86,13 @@ export default async function DynamicSeoPage({ params }: Props) {
     <main>
       <Header />
       <h1 className="sr-only">{h1Text}</h1>
-      <Hero />
+      <Hero dynamicLocation={dynamicLocation} />
       <Services />
       <WhyChooseUs />
       <Pricing />
       <Reviews />
       <ServiceAreas />
-      <FAQ />
+      <FAQ dynamicLocation={dynamicLocation} />
       <StickyCTA />
       <Footer />
     </main>

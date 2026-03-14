@@ -34,7 +34,7 @@ function scrollToSection(id: string) {
   }
 }
 
-export default function Hero() {
+export default function Hero({ dynamicLocation }: { dynamicLocation?: string }) {
   return (
     <>
       {/* ── HERO SECTION ── */}
@@ -65,7 +65,7 @@ export default function Hero() {
             {/* Headline */}
             <h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight tracking-tight mb-2">
               Top-Rated AC Service <br className="md:hidden" />
-              <span className="text-cyan-300">in Gurgaon</span>
+              <span className="text-cyan-300">in {dynamicLocation ? `${dynamicLocation}, Gurgaon` : 'Gurgaon'}</span>
             </h1>
 
             <p className="text-white/80 text-sm md:text-base font-medium mb-4">

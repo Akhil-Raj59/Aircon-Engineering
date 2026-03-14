@@ -1,6 +1,15 @@
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { phoneNumber } from "@/lib/constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Aircon Engineering Gurgaon",
+  description: "Need urgent AC repair? Contact Aircon Engineering for fast, reliable, and affordable AC services anywhere in Gurgaon. Available for same-day service.",
+  alternates: {
+    canonical: "https://www.aircon-engineering.com/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
