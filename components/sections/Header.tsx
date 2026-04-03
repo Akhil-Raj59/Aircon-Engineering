@@ -57,7 +57,7 @@ export default function Header() {
       <img
         src="/assets/logo.png"
         alt="Aircon Engineering"
-        className="h-8 w-auto"
+        className="h-20 w-26 object-contain"
       />
     </a>
   </div>
