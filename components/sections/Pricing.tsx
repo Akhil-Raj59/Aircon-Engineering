@@ -4,9 +4,9 @@ import { phoneNumber } from "@/lib/constants";
 
 export default function Pricing() {
   const pricingData = [
-    { service: "AC General Service", price: "₹499 onwards" },
+    { service: "AC General Service", price: "₹399 onwards" },
     { service: "AC Repair Visit Charge", price: "₹299 inspection" },
-    { service: "AC Gas Filling", price: "₹2,200 onwards" },
+    { service: "AC Gas Filling", price: "₹2,699 onwards" },
     { service: "Split AC Installation", price: "₹1,500 onwards" },
   ];
 

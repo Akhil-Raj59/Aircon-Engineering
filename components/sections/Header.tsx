@@ -57,7 +57,7 @@ export default function Header() {
       <img
         src="/assets/logo.png"
         alt="Aircon Engineering"
-        className="h-20 w-26 object-contain"
+        className="h-8 w-auto"
       />
     </a>
   </div>
@@ -75,7 +75,7 @@ export default function Header() {
     <div className="hidden sm:flex items-center gap-1 text-sm font-medium text-gray-600">
       <span>Gurgaon ▾</span>
     </div>
-    <a href={`tel:+${phoneNumber}`} className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg text-sm font-bold transition flex items-center gap-1">
+    <a href={`tel:+${phoneNumber}`} className="bg-blue-600 hover:bg-orange-600 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg text-sm font-bold transition flex items-center gap-1">
       <span>📞</span> <span className="hidden sm:inline">Book Now</span><span className="sm:hidden">Call</span>
     </a>
     

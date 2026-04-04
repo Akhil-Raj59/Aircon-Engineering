@@ -8,12 +8,12 @@ export const serviceCategories = [
       {
         id: "premium-service",
         title: "Premium AC Servicing",
-        startingPrice: 469,
+        startingPrice: 399,
         description: "High-Pressure Jet Cleaning - Eliminates dust and debris to improve airflow",
         options: 2,
         subServices: [
-          { id: "split-premium", name: "Split AC Premium Service", price: 469 },
-          { id: "window-premium", name: "Window AC Premium Service", price: 469 },
+          { id: "split-premium", name: "Split AC Premium Service", price: 399 },
+          { id: "window-premium", name: "Window AC Premium Service", price: 399 },
         ],
         details: {
           includes: ["High-pressure jet wash", "Condenser cleaning", "Cooling efficiency test"],
@@ -21,14 +21,29 @@ export const serviceCategories = [
         },
       },
       {
+        id: "Premium-combo-service",
+        title: "Premium AC Service Combo (4 ACs)",
+        startingPrice: 1469,
+        description: "Bulk service package for multiple units with high-pressure cleaning. Perfect for large apartments & offices.",
+        options: 2,
+        subServices: [
+          { id: "split-premium-combo", name: "Split AC Premium Service (4 Units)", price: 1469 },
+          { id: "window-premium-combo", name: "Window AC Premium Service (4 Units)", price: 1469 },
+        ],
+        details: {
+          includes: ["High-pressure jet wash for 4 units", "Condenser cleaning", "Cooling efficiency test"],
+          excludes: ["Gas refill", "Spare parts"],
+        },
+      },
+      {
         id: "foam-blast-service",
         title: "Advanced Foam Jet AC Cleaning",
-        startingPrice: 599,
+        startingPrice: 499,
         description: "Ultra Max Cooling - Deep cleaning with foam jet spray for faster and more efficient cooling. Highly recommended for dust-heavy environments in NCR.",
         options: 2,
         subServices: [
-          { id: "split-foam-service", name: "Split AC Foam Service", price: 599 },
-          { id: "window-foam-service", name: "Window AC Foam Service", price: 599 },
+          { id: "split-foam-service", name: "Split AC Foam Service", price: 499 },
+          { id: "window-foam-service", name: "Window AC Foam Service", price: 499 },
         ],
         details: {
           includes: ["Deep foam jet cleaning", "Filter cleaning", "Drain tray cleaning", "Post-service performance check", "30-Day Service Warranty"],
@@ -38,12 +53,12 @@ export const serviceCategories = [
       {
         id: "featured-service-combo",
         title: "Foam Jet AC Service Combo (4 ACs)",
-        startingPrice: 2279,
+        startingPrice: 1869,
         description: "Bulk service package for multiple units with high-pressure cleaning. Perfect for large apartments & offices.",
         options: 2,
         subServices: [
-          { id: "split-premium-combo", name: "Split AC Premium Service (4 Units)", price: 2279 },
-          { id: "window-premium-combo", name: "Window AC Premium Service (4 Units)", price: 2279 },
+          { id: "split-premium-combo", name: "Split AC Premium Service (4 Units)", price: 1869 },
+          { id: "window-premium-combo", name: "Window AC Premium Service (4 Units)", price: 1869 },
         ],
         details: {
           includes: ["High-pressure jet wash for 4 units", "Condenser cleaning", "Cooling efficiency test"],
@@ -115,7 +130,8 @@ export const serviceCategories = [
         description: "Expert installation of both indoor and outdoor units with core cutting and proper gas pressure check.",
         options: 1,
         subServices: [
-          { id: "split-install", name: "Split AC Installation", price: 1549 },
+          { id: "window-install", name: "Window AC Installation", price: 1149 },
+          { id: "split-install", name: "Split AC Installation", price: 1499 },
         ],
         details: {
           includes: ["Indoor unit mounting", "Outdoor unit fitting", "Basic testing"],
@@ -125,11 +141,12 @@ export const serviceCategories = [
       {
         id: "ac-uninstallation",
         title: "AC Uninstallation",
-        startingPrice: 699,
+        startingPrice: 599,
         description: "Safe uninstallation of both indoor and outdoor units",
         options: 1,
         subServices: [
-          { id: "split-uninstall", name: "Split AC Uninstallation", price: 899 },
+          { id: "split-uninstall", name: "Split AC Uninstallation", price: 799 },
+          { id: "window-uninstall", name: "Window AC Uninstallation", price: 599 },
         ],
         details: {
           includes: ["Gas pumping/storage", "Safe removal", "Pipe sealing"],

@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { phoneNumber } from "@/lib/constants";
+// import { phoneNumber } from "@/lib/constants";
+
+const phoneNumber = "918860186269";
 
 export default function Footer() {
   return (
@@ -76,7 +78,7 @@ export default function Footer() {
           <p className="text-sm mb-2">
             Phone:{" "}
             <a
-              href={`tel:+$8860186269`}
+              href={`tel:+${phoneNumber}`}
               className="hover:text-white transition cursor-pointer"
             >
               +(91) 88601-86269
@@ -86,10 +88,10 @@ export default function Footer() {
           <p className="text-sm mb-6">
             Email:{" "}
             <a
-              href="mailto:support@airconengineering.in"
+              href="mailto:care@townairncr.com"
               className="hover:text-white transition cursor-pointer"
             >
-              support@airconengineering.in
+              care@townairncr.com
             </a>
           </p>
           
