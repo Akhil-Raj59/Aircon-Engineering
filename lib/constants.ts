@@ -179,4 +179,84 @@ export const serviceCategories = [
       },
     ],
   },
+  {
+    id: "refrigerator",
+    title: "Expert Refrigerator Repair & Service",
+    cards: [
+      {
+        id: "fridge-repair",
+        title: "Single/Double Door Fridge Repair",
+        startingPrice: 299,
+        description: "Diagnosis and repair for cooling issues, compressor faults, or gas leakage.",
+        options: 1,
+        subServices: [
+          { id: "fridge-inspection", name: "Inspection Charges", price: 299 },
+        ],
+        details: {
+          includes: ["Fault diagnosis", "Compressor check", "Gas level check"],
+          excludes: ["Spare parts cost extra", "Gas refilling extra"],
+        },
+      },
+    ],
+  },
+  {
+    id: "washing-machine",
+    title: "Professional Washing Machine Repair",
+    cards: [
+      {
+        id: "wm-repair",
+        title: "Fully/Semi Automatic Repair",
+        startingPrice: 249,
+        description: "Expert fixing of drum issues, motor problems, and PCB faults.",
+        options: 1,
+        subServices: [
+          { id: "wm-inspection", name: "Inspection Charges", price: 249 },
+        ],
+        details: {
+          includes: ["Machine diagnosis", "Motor testing", "Drum check"],
+          excludes: ["Spare parts extra"],
+        },
+      },
+    ],
+  },
+  {
+    id: "ro-service",
+    title: "RO Water Purifier Service",
+    cards: [
+      {
+        id: "ro-cleaning",
+        title: "Deep RO Servicing",
+        startingPrice: 499,
+        description: "Complete filter cleaning and TDS level adjustment for pure drinking water.",
+        options: 1,
+        subServices: [
+          { id: "ro-standard", name: "Standard RO Service", price: 499 },
+        ],
+        details: {
+          includes: ["Filter cleaning", "Membrane check", "TDS level check"],
+          excludes: ["New filters cost extra"],
+        },
+      },
+    ],
+  },
+  {
+    id: "chimney",
+    title: "Kitchen Chimney Cleaning & Repair",
+    cards: [
+      {
+        id: "chimney-service",
+        title: "Chimney Deep Cleaning",
+        startingPrice: 799,
+        description: "Thorough removal of grease and oil from filters and motor.",
+        options: 1,
+        subServices: [
+          { id: "chimney-deep", name: "Deep Cleaning Service", price: 799 },
+        ],
+        details: {
+          includes: ["Filter degreasing", "Blower cleaning", "Outer body polish"],
+          excludes: ["Spare parts replacement"],
+        },
+      },
+    ],
+  },
 ];

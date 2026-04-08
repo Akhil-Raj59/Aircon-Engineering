@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex items-center gap-3 mb-4">
             <Image
               src="/assets/logo.png"
-              alt="Aircon Engineering Logo"
+              alt="Townairncr Logo"
               width={120}
               height={40}
               className="h-8 w-auto"
@@ -114,7 +114,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 text-center py-5 text-gray-500 text-xs">
-        © {new Date().getFullYear()} Aircon Engineering. All rights reserved.
+        © {new Date().getFullYear()} Townairncr. All rights reserved.
       </div>
     </footer>
   );

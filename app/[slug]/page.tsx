@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const area = slug.replace("ac-service-in-", "").replace("-gurgaon", "");
     const formattedArea = formatAreaName(area);
     return {
-      title: `Best AC Service in ${formattedArea}, Gurgaon | Aircon Engineering`,
+      title: `Best AC Service in ${formattedArea}, Gurgaon | Townairncr`,
       description: `Expert AC repair, service, and installation in ${formattedArea}, Gurgaon. Same-day visit, transparent pricing, and 30-day warranty. Book now!`,
       keywords: [
         `AC service in ${formattedArea}`,

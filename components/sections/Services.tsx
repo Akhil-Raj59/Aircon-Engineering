@@ -13,13 +13,13 @@ export default function Services() {
         {/* Section Global Header for SEO & UX */}
         <div className="text-center mb-16">
           <p className="text-primary font-semibold text-sm tracking-wider uppercase">
-            Professional AC Solutions in Gurgaon
+            Professional Appliance Solutions in Gurgaon
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mt-3">
-            Expert AC Repair, Service & Installation
+            Expert Repair & Service for All Home Appliances
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Get your air conditioner running like new. Same-day service • No hidden charges • 30-day service warranty.
+            From ACs and Refrigerators to Washing Machines and RO Purifiers — get your appliances fixed by certified experts. Same-day service • Comprehensive Warranty • 100% Satisfaction.
           </p>
         </div>
 

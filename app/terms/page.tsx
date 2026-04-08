@@ -10,12 +10,12 @@ export default function TermsPage() {
         
         <div className="space-y-6 text-gray-700 leading-relaxed text-sm lg:text-base">
           <p>
-            Welcome to Aircon Engineering! These terms and conditions outline the rules and regulations for the use of our website and services, located in Gurgaon, Haryana.
+            Welcome to Townairncr! These terms and conditions outline the rules and regulations for the use of our website and services, located in Gurgaon, Haryana.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">1. Acceptance of Terms</h2>
           <p>
-            By accessing this website and booking our AC repair/service, we assume you accept these terms and conditions. Do not continue to use Aircon Engineering if you do not agree to take all of the terms and conditions stated on this page.
+            By accessing this website and booking our AC repair/service, we assume you accept these terms and conditions. Do not continue to use Townairncr if you do not agree to take all of the terms and conditions stated on this page.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">2. Service Booking and Delivery</h2>
@@ -39,7 +39,7 @@ export default function TermsPage() {
 
           <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">5. Disclaimer</h2>
           <p>
-            To the maximum extent permitted by applicable law, we exclude all representations, warranties, and conditions relating to our website and the use of this website. While we guarantee our service quality, Aircon Engineering is not liable for existing hardware failures or manufacturing defects in your AC unit.
+            To the maximum extent permitted by applicable law, we exclude all representations, warranties, and conditions relating to our website and the use of this website. While we guarantee our service quality, Townairncr is not liable for existing hardware failures or manufacturing defects in your AC unit.
           </p>
         </div>
       </div>

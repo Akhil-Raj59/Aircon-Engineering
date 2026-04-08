@@ -3,8 +3,8 @@ import Footer from "@/components/sections/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Aircon Engineering Gurgaon",
-  description: "Learn about Aircon Engineering, Gurgaon's most trusted AC service provider. Expert technicians, 100% cooling guarantee, and same-day repair services.",
+  title: "About Us | Townairncr Gurgaon",
+  description: "Learn about Townairncr (formerly Aircon Engineering), Gurgaon's most trusted AC service provider. Expert technicians, 100% cooling guarantee, and same-day repair services.",
   alternates: {
     canonical: "https://www.aircon-engineering.com/about",
   },
@@ -16,7 +16,7 @@ export default function AboutPage() {
     "@type": "AboutPage",
     "mainEntity": {
       "@type": "LocalBusiness",
-      "name": "Aircon Engineering",
+      "name": "Townairncr",
       "description": "Gurgaon's most trusted AC service provider offering expert repair, maintenance, and installation services.",
       "url": "https://www.aircon-engineering.com/about"
     }
@@ -30,9 +30,9 @@ export default function AboutPage() {
       />
       <Header />
       <div className="flex-grow max-w-4xl mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">About Aircon Engineering</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">About Townairncr (formerly Aircon Engineering)</h1>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Welcome to Aircon Engineering, the leading AC repair and service company in Gurgaon. With years of experience and a team of highly certified technicians, we are dedicated to providing the best AC service across all sectors and localities.
+          Welcome to Townairncr (formerly Aircon Engineering), the leading AC repair and service company in Gurgaon. With years of experience and a team of highly certified technicians, we are dedicated to providing the best AC service across all sectors and localities.
         </p>
         <p className="text-gray-700 mb-4 leading-relaxed">
           Our mission is to ensure you have a comfortable, ultra-max cooling experience during the harsh summers. We specialize in AC repair, gas charging, AC installation, and deep AC cleaning for all major brands including Voltas, Daikin, LG, Blue Star, Hitachi, and more.
@@ -45,7 +45,7 @@ export default function AboutPage() {
           <li><strong>30-Day Warranty:</strong> We stand behind our work with a 30-day service warranty.</li>
         </ul>
         <p className="text-gray-700 mb-4 leading-relaxed">
-          Whether you need a Split AC service in Sector 56, Window AC installation in DLF Phase 1, or urgent AC repair on Sohna Road, Aircon Engineering is your trusted partner. Our team uses genuine spare parts and advanced cleaning techniques (like Foam Blast) to restore your AC to its peak performance.
+          Whether you need a Split AC service in Sector 56, Window AC installation in DLF Phase 1, or urgent AC repair on Sohna Road, Townairncr is your trusted partner. Our team uses genuine spare parts and advanced cleaning techniques (like Foam Blast) to restore your AC to its peak performance.
         </p>
         <div className="mt-8 bg-blue-50 border border-blue-100 p-6 rounded-xl">
           <h3 className="text-lg font-bold text-blue-900 mb-2">Our Commitment</h3>

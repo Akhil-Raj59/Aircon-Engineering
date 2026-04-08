@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            Why Choose Aircon Engineering?
+            Why Choose Townairncr?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Trusted AC repair & servicing experts in Gurgaon with fast response and honest pricing.

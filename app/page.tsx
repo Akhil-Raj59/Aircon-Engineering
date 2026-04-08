@@ -11,7 +11,7 @@ import Header from "@/components/sections/Header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Best AC Service & Repair in Gurgaon | Aircon Engineering",
+  title: "Best AC Service & Repair in Gurgaon | Townairncr (formerly Aircon Engineering)",
   alternates: {
     canonical: "https://www.aircon-engineering.com",
   },
@@ -21,7 +21,7 @@ export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Aircon Engineering",
+    name: "Townairncr",
     image: "https://www.aircon-engineering.com/assets/logo.png",
     "@id": "https://www.aircon-engineering.com",
     url: "https://www.aircon-engineering.com",

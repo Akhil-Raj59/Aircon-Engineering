@@ -4,8 +4,8 @@ import { phoneNumber } from "@/lib/constants";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Aircon Engineering Gurgaon",
-  description: "Need urgent AC repair? Contact Aircon Engineering for fast, reliable, and affordable AC services anywhere in Gurgaon. Available for same-day service.",
+  title: "Contact Us | Townairncr Gurgaon",
+  description: "Need urgent AC repair? Contact Townairncr (formerly Aircon Engineering) for fast, reliable, and affordable AC services anywhere in Gurgaon. Available for same-day service.",
   alternates: {
     canonical: "https://www.aircon-engineering.com/contact",
   },
@@ -18,7 +18,7 @@ export default function ContactPage() {
       <div className="flex-grow max-w-4xl mx-auto px-6 py-12 w-full">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
         <p className="text-gray-700 mb-10 leading-relaxed">
-          Need urgent AC repair or looking to schedule a regular service? Get in touch with Aircon Engineering today. Our team is ready to provide fast, reliable, and affordable AC service anywhere in Gurgaon.
+          Need urgent AC repair or looking to schedule a regular service? Get in touch with Townairncr today. Our team is ready to provide fast, reliable, and affordable AC service anywhere in Gurgaon.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -44,7 +44,7 @@ export default function ContactPage() {
                 <div className="text-2xl">📧</div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Email Address</h3>
-                  <a href="mailto:support@airconengineering.in" className="text-blue-600 hover:underline">support@airconengineering.in</a>
+                  <a href="mailto:care@townairncr.com" className="text-blue-600 hover:underline">care@townairncr.com</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">

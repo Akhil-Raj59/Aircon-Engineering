@@ -58,12 +58,12 @@ export default function Header() {
     >
       <img
         src="/assets/logo.png"
-        alt="Aircon Engineering"
+        alt="Townairncr"
         className="h-8 w-auto"
       />
       <img
         src="/assets/logo_text.png"
-        alt="Aircon Engineering"
+        alt="Townairncr"
         className="h-9 w-auto"
       />
       

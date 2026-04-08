@@ -4,26 +4,50 @@ const services = [
   {
     id: "installation",
     icon: "🔧",
-    label: "Installation",
-    sublabel: "/ Uninstall",
+    label: "AC",
+    sublabel: "Install",
   },
   {
     id: "service",
     icon: "❄️",
-    label: "Service",
-    sublabel: "& Cleaning",
+    label: "AC",
+    sublabel: "Service",
   },
   {
     id: "repair",
     icon: "⚙️",
-    label: "Repair",
-    sublabel: "All Brands",
+    label: "AC",
+    sublabel: "Repair",
   },
   {
     id: "gas",
     icon: "🧯",
-    label: "Gas",
-    sublabel: "Charging",
+    label: "AC",
+    sublabel: "Gas",
+  },
+  {
+    id: "refrigerator",
+    icon: "🧊",
+    label: "Fridge",
+    sublabel: "Repair",
+  },
+  {
+    id: "washing-machine",
+    icon: "🧺",
+    label: "Washing",
+    sublabel: "Machine",
+  },
+  {
+    id: "ro-service",
+    icon: "💧",
+    label: "RO",
+    sublabel: "Service",
+  },
+  {
+    id: "chimney",
+    icon: "💨",
+    label: "Chimney",
+    sublabel: "Service",
   },
 ];
 
@@ -64,7 +88,7 @@ export default function Hero({ dynamicLocation }: { dynamicLocation?: string }) 
 
             {/* Headline */}
             <h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight tracking-tight mb-2">
-              Top-Rated AC Service <br className="md:hidden" />
+              Best Appliance Service <br className="md:hidden" />
               <span className="text-cyan-300">in {dynamicLocation ? `${dynamicLocation}, Gurgaon` : 'Gurgaon'}</span>
             </h1>
 
@@ -86,13 +110,13 @@ export default function Hero({ dynamicLocation }: { dynamicLocation?: string }) 
 
           {/* Rating pill - bottom right */}
           <div className="absolute bottom-4 right-4 bg-white/10 backdrop-blur text-white text-xs px-3 py-1.5 rounded-full border border-white/20 font-medium">
-            🏆 Best AC Service in Gurgaon
+            🏆 Best Service in Gurgaon
           </div>
         </div>
 
         {/* ── 4 SERVICE ICON TABS ── */}
         <div className="bg-white border-b border-gray-100 shadow-sm">
-          <div className="grid grid-cols-4 max-w-lg mx-auto">
+          <div className="grid grid-cols-4 md:grid-cols-8 max-w-6xl mx-auto">
             {services.map((svc) => (
               <button
                 key={svc.id}

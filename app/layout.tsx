@@ -18,7 +18,7 @@ const bodyFont = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aircon-engineering.com"),
-  title: "Best AC Service & Repair in Gurgaon | Aircon Engineering",
+  title: "Best AC Service & Repair in Gurgaon | Townairncr (formerly Aircon Engineering)",
   description:
     "Top-rated and affordable AC repair, gas filling, professional installation & maintenance in Gurgaon. Same-day service with verified, expert technicians. 100% Cooling Guaranteed.",
   keywords: [
@@ -33,28 +33,28 @@ export const metadata: Metadata = {
     "Same day AC service Gurgaon",
     "AC technician in Gurgaon"
   ],
-  authors: [{ name: "Aircon Engineering" }],
-  creator: "Aircon Engineering",
-  publisher: "Aircon Engineering",
+  authors: [{ name: "Townairncr" }],
+  creator: "Townairncr",
+  publisher: "Townairncr",
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://www.aircon-engineering.com",
-    title: "Best AC Service & Repair in Gurgaon | Aircon Engineering",
+    title: "Best AC Service & Repair in Gurgaon | Townairncr (formerly Aircon Engineering)",
     description: "Expert AC repair, installation, and gas charging in Gurgaon. Book skilled technicians for same-day service.",
-    siteName: "Aircon Engineering",
+    siteName: "Townairncr",
     images: [
       {
         url: "/assets/logo.png",
         width: 800,
         height: 600,
-        alt: "Aircon Engineering Logo",
+        alt: "Townairncr Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best AC Service & Repair in Gurgaon | Aircon Engineering",
+    title: "Best AC Service & Repair in Gurgaon | Townairncr (formerly Aircon Engineering)",
     description: "Expert AC repair, installation, and gas charging in Gurgaon.",
     images: ["/assets/logo.png"],
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   verification: {
-    google: "UGsvjIR02UtKZARrHkewThbls9WoLE_jydo9t_sRtLc",
+    google: "lESDnxClpLDz2OanIT-V4Ya1nDwNJSGobeGrMgEY1Xk",
   },
 };
 
