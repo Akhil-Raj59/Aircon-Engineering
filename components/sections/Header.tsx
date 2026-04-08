@@ -53,12 +53,20 @@ export default function Header() {
 
   {/* Logo */}
   <div className="flex items-center">
-    <a href="/">
+    <a href="/"
+    className="flex gap-0.5"
+    >
       <img
         src="/assets/logo.png"
         alt="Aircon Engineering"
         className="h-8 w-auto"
       />
+      <img
+        src="/assets/logo_text.png"
+        alt="Aircon Engineering"
+        className="h-9 w-auto"
+      />
+      
     </a>
   </div>
 
