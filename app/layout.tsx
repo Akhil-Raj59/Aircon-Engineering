@@ -17,7 +17,7 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.aircon-engineering.com"),
+  metadataBase: new URL("https://www.townairncr.com"),
   title: "Best AC Service & Repair in Gurgaon | Townairncr (formerly Aircon Engineering)",
   description:
     "Top-rated and affordable AC repair, gas filling, professional installation & maintenance in Gurgaon. Same-day service with verified, expert technicians. 100% Cooling Guaranteed.",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.aircon-engineering.com",
+    url: "https://www.townairncr.com",
     title: "Best AC Service & Repair in Gurgaon | Townairncr (formerly Aircon Engineering)",
     description: "Expert AC repair, installation, and gas charging in Gurgaon. Book skilled technicians for same-day service.",
     siteName: "Townairncr",

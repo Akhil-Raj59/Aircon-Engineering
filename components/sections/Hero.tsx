@@ -2,28 +2,10 @@
 
 const services = [
   {
-    id: "installation",
-    icon: "🔧",
-    label: "AC",
-    sublabel: "Install",
-  },
-  {
     id: "service",
     icon: "❄️",
     label: "AC",
-    sublabel: "Service",
-  },
-  {
-    id: "repair",
-    icon: "⚙️",
-    label: "AC",
-    sublabel: "Repair",
-  },
-  {
-    id: "gas",
-    icon: "🧯",
-    label: "AC",
-    sublabel: "Gas",
+    sublabel: "Repair/Service",
   },
   {
     id: "refrigerator",
@@ -40,14 +22,8 @@ const services = [
   {
     id: "ro-service",
     icon: "💧",
-    label: "RO",
-    sublabel: "Service",
-  },
-  {
-    id: "chimney",
-    icon: "💨",
-    label: "Chimney",
-    sublabel: "Service",
+    label: "RO &",
+    sublabel: "Chimney",
   },
 ];
 
@@ -116,7 +92,7 @@ export default function Hero({ dynamicLocation }: { dynamicLocation?: string }) 
 
         {/* ── 4 SERVICE ICON TABS ── */}
         <div className="bg-white border-b border-gray-100 shadow-sm">
-          <div className="grid grid-cols-4 md:grid-cols-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-4 max-w-lg mx-auto">
             {services.map((svc) => (
               <button
                 key={svc.id}
