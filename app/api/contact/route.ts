@@ -84,7 +84,7 @@ export async function POST(req: NextRequest) {
 
     // Auto reply to client
     await resend.emails.send({
-      from: "Sociesto <onboarding@resend.dev>",
+      from: "Sociesto <532akhil@gmail.com>",
       to: email,
       subject: "We received your inquiry",
 

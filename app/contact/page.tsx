@@ -1,18 +1,80 @@
+"use client";
+
+import { useState } from "react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { phoneNumber } from "@/lib/constants";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Contact Us | Townairncr Gurgaon",
-  description:
-    "Contact Townairncr for AC repair, installation, maintenance, and AMC services in Gurgaon. Fast response, expert technicians, and same-day support available.",
-  alternates: {
-    canonical: "https://www.aircon-engineering.com/contact",
-  },
+const initialState = {
+  fullName: "",
+  email: "",
+  phone: "",
+  projectType: "AC Repair",
+  description: "",
 };
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState(initialState);
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setSuccess("");
+    setError("");
+
+    try {
+      const payload = {
+        ...formData,
+
+        entryUrl: window.location.href,
+        sourceUrl: window.location.origin,
+        referrerUrl: document.referrer || "Direct",
+      };
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Something went wrong");
+      }
+
+      setSuccess(
+        "Your request has been submitted successfully. Our team will contact you shortly."
+      );
+
+      setFormData(initialState);
+    } catch (err: any) {
+      setError(err.message || "Failed to submit form");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <main className="min-h-screen flex flex-col bg-gray-50 pt-24">
       <Header />
@@ -68,9 +130,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <h3 className="font-semibold text-gray-900">
-                        Call Us
-                      </h3>
+                      <h3 className="font-semibold text-gray-900">Call Us</h3>
 
                       <a
                         href={`tel:+${phoneNumber}`}
@@ -166,7 +226,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right Side - Contact Form */}
+            {/* Right Side */}
             <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-10">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900">
@@ -178,7 +238,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name
@@ -186,6 +246,10 @@ export default function ContactPage() {
 
                   <input
                     type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    required
                     placeholder="Enter your full name"
                     className="w-full rounded-2xl border border-gray-200 px-4 py-4 outline-none focus:border-blue-500"
                   />
@@ -199,6 +263,10 @@ export default function ContactPage() {
 
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
                       placeholder="you@example.com"
                       className="w-full rounded-2xl border border-gray-200 px-4 py-4 outline-none focus:border-blue-500"
                     />
@@ -211,6 +279,9 @@ export default function ContactPage() {
 
                     <input
                       type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       placeholder="Enter phone number"
                       className="w-full rounded-2xl border border-gray-200 px-4 py-4 outline-none focus:border-blue-500"
                     />
@@ -222,7 +293,12 @@ export default function ContactPage() {
                     Service Type
                   </label>
 
-                  <select className="w-full rounded-2xl border border-gray-200 px-4 py-4 outline-none focus:border-blue-500">
+                  <select
+                    name="projectType"
+                    value={formData.projectType}
+                    onChange={handleChange}
+                    className="w-full rounded-2xl border border-gray-200 px-4 py-4 outline-none focus:border-blue-500"
+                  >
                     <option>AC Repair</option>
                     <option>AC Installation</option>
                     <option>AC Gas Filling</option>
@@ -239,21 +315,38 @@ export default function ContactPage() {
 
                   <textarea
                     rows={6}
+                    name="description"
+                    value={formData.description}
+                    onChange={handleChange}
+                    required
                     placeholder="Describe your AC issue or service requirement"
                     className="w-full rounded-2xl border border-gray-200 px-4 py-4 outline-none resize-none focus:border-blue-500"
                   />
                 </div>
 
+                {success && (
+                  <div className="rounded-2xl bg-green-50 border border-green-200 px-4 py-3 text-green-700 text-sm">
+                    {success}
+                  </div>
+                )}
+
+                {error && (
+                  <div className="rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-red-700 text-sm">
+                    {error}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-2xl transition"
+                  disabled={loading}
+                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-70 text-white font-semibold py-4 rounded-2xl transition"
                 >
-                  Submit Request
+                  {loading ? "Submitting..." : "Submit Request"}
                 </button>
 
                 <p className="text-sm text-gray-500 text-center">
-                  By submitting this form, you agree to be contacted by our
-                  support team regarding your service request.
+                  By submitting this form, you agree to be contacted regarding
+                  your service request.
                 </p>
               </form>
             </div>
